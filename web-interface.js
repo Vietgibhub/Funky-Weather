@@ -1,5 +1,5 @@
 let weather = {
-  apiKey: "",
+  apiKey: "1729b525dc136d91e7e16745986693e3",
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -32,7 +32,7 @@ let weather = {
     document.querySelector(".wind").innerText =
       "Wind speed: " + speed + " km/h"; //display 
     document.querySelector(".weather").classList.remove("loading"); //remove the loading class
-	document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + main + "')";	
+	document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+ main+ "')";
   }, //display the background image followings the weather
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value); //fetch the weather of the city that is typed in the search bar
